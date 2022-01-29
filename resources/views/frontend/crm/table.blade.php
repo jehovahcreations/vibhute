@@ -7,10 +7,10 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-xl-6">
-                                           <h4 class="card-title">Festive</h4>
+                                           <h4 class="card-title">crm</h4>
                                         </div>
                                         <div class="col-xl-6">
-                                            <a href="/festive/create" class="btn btn-primary">Add+</a>
+                                            <a href="/crm/create" class="btn btn-primary">Add+</a>
                                         </div>
                                     </div>
 
@@ -27,7 +27,7 @@
                                         <p>
                                             The print button will open a new window in the end user's browser and, by default, automatically trigger the print function allowing the end user to print the table. The window will be closed once the print is complete, or has been cancelled.
                                         </p> --}}
-    
+
                                         <div class="table-responsive">
                                             <table class="table table-striped dataex-html5-selectors">
                                                 <thead>
@@ -54,12 +54,12 @@
                                                         <td>{{ $tables->name }}</td>
                                                         <td><img src="data:image/png;base64, {{ $tables->image }}" width='10%' alt="Image Preview" /></td>
                                                         <td>@if ($tables->is_Active == 1)
-                                                           <a href="{{ route('festive.deactive',[$tables->_id]) }}" class="btn btn-danger">Deactivate</a>
+                                                           <a href="{{ route('crm.deactive',[$tables->_id]) }}" class="btn btn-danger">Deactivate</a>
                                                            @else
-                                                           <a href="{{ route('festive.active',[$tables->_id]) }}" class="btn btn-success">Activate</a>
+                                                           <a href="{{ route('crm.active',[$tables->_id]) }}" class="btn btn-success">Activate</a>
                                                         @endif</td>
-                                                        {{-- <td><a href="{{ route('festive.edit',[$tables->_id]) }}" class="btn btn-primary">Edit</a></td> --}}
-                                                        <td><a href="{{ route('festive.delete',[$tables->_id]) }}" class="btn btn-primary">Delete</a></td>
+                                                        {{-- <td><a href="{{ route('crm.edit',[$tables->_id]) }}" class="btn btn-primary">Edit</a></td> --}}
+                                                        <td><a href="{{ route('crm.delete',[$tables->_id]) }}" class="btn btn-primary">Delete</a></td>
 </tr>
                                                           @endforeach
 

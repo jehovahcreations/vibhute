@@ -7,10 +7,10 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-xl-6">
-                                           <h4 class="card-title">poster</h4>
+                                           <h4 class="card-title">birthday</h4>
                                         </div>
                                         <div class="col-xl-6">
-                                            <a href="/poster/create" class="btn btn-primary">Add+</a>
+                                            <a href="/birthday/create" class="btn btn-primary">Add+</a>
                                         </div>
                                     </div>
 
@@ -54,12 +54,12 @@
                                                         <td>{{ $tables->name }}</td>
                                                         <td><img src="data:image/png;base64, {{ $tables->image }}" width='10%' alt="Image Preview" /></td>
                                                         <td>@if ($tables->is_Active == 1)
-                                                           <a href="{{ route('poster.deactive',[$tables->_id]) }}" class="btn btn-danger">Deactivate</a>
+                                                           <a href="{{ route('birthday.deactive',[$tables->_id]) }}" class="btn btn-danger">Deactivate</a>
                                                            @else
-                                                           <a href="{{ route('poster.active',[$tables->_id]) }}" class="btn btn-success">Activate</a>
+                                                           <a href="{{ route('birthday.active',[$tables->_id]) }}" class="btn btn-success">Activate</a>
                                                         @endif</td>
-                                                        {{-- <td><a href="{{ route('poster.edit',[$tables->_id]) }}" class="btn btn-primary">Edit</a></td> --}}
-                                                        <td><a href="{{ route('poster.delete',[$tables->_id]) }}" class="btn btn-primary">Delete</a></td>
+                                                        {{-- <td><a href="{{ route('birthday.edit',[$tables->_id]) }}" class="btn btn-primary">Edit</a></td> --}}
+                                                        <td><a href="{{ route('birthday.delete',[$tables->_id]) }}" class="btn btn-primary">Delete</a></td>
 </tr>
                                                           @endforeach
 

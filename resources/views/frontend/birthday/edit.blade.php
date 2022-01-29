@@ -5,59 +5,38 @@
                         <div class="col-md-12 col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Category</h4>
+                                    <h4 class="card-title">Youtube</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form class="form form-horizontal"action="/crm/addabout" method="post" enctype="multipart/form-data">
+                                        <form class="form form-horizontal"action="/youtube/update" method="post" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                             <div class="form-body">
                                                 <div class="row">
-                                                     <div class="col-12">
+                                                    <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
-                                                                <span>Main Menu</span>
+                                                                <span>Heading</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="" name="mainMenu">
-                                                                       {{-- // @foreach($table as $tables) --}}
-                                                                        @foreach ($table->unique('mainMenu') as $tables)
-                                                                           <option value="{{ $tables->mainMenu }}">{{ $tables->mainMenu }}</option>
-                                                                           @endforeach
-                                                                       </select>
-                                                                   </fieldset>
-                                                          </div>
-                                                        </div>
-                                                    </div>
-                                                     <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>Sub Menu</span>
+                                                                <input type="text" id="name" class="form-control" name="name" placeholder="Heading" value="{{ $table->name }}">
                                                             </div>
-                                                            <div class="col-md-8">
-                                                                 <fieldset class="form-group">
-                                                                    <select class="form-control" id="" name="subMenu">
-                                                                        @foreach($table as $tables)
-                                                                           <option value="{{ $tables->subMenu }}">{{ $tables->subMenu }}</option>
-                                                                           @endforeach
-                                                                       </select>
-                                                                   </fieldset>
-                                                          </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
-                                                                <span>name</span>
+                                                                <span>URL</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="name" placeholder="name">
+                                                               <input type="text" id="decp" class="form-control" name="url" placeholder="Decription" value="{{ $table->url     }}">
+                                                               <input type="hidden" id="img" class="form-control" name="img" placeholder="Decription" value="{{ $table->image }}">
+                                                               <input type="hidden" id="id" class="form-control" name="id" placeholder="Decription" value="{{ $table->_id }}">
+
+
                                                             </div>
                                                         </div>
                                                     </div>
-
-
                                                      <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
@@ -68,8 +47,6 @@
                                                         <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                                                         </div>
                                                     </div>
-
-
 
 
                                                     <div class="col-md-8 offset-md-4">

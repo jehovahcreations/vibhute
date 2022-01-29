@@ -259,4 +259,16 @@ Route::get('/user/edit/{id}', 'App\Http\Controllers\UserController@edit')->middl
 Route::post('/user/addabout', ['as' => '/user/addabout', 'uses' => 'App\Http\Controllers\UserController@addabout']);
 Route::post('/user/update', ['as' => '/user/update/', 'uses' => 'App\Http\Controllers\UserController@update']);
 
+//Birthday
+
+Route::get('/birthday/table', 'App\Http\Controllers\BirthdayController@table')->middleware(['auth'])->name('birthday.table');
+Route::get('/birthday/create', 'App\Http\Controllers\BirthdayController@create')->middleware(['auth'])->name('birthday.create');
+Route::get('/birthday/deactive/{id}', 'App\Http\Controllers\BirthdayController@deactive')->middleware(['auth'])->name('birthday.deactive');
+Route::get('/birthday/active/{id}', 'App\Http\Controllers\BirthdayController@active')->middleware(['auth'])->name('birthday.active');
+Route::get('/birthday/delete/{id}', 'App\Http\Controllers\BirthdayController@delete')->middleware(['auth'])->name('birthday.delete');
+Route::get('/birthday/edit/{id}', 'App\Http\Controllers\BirthdayController@edit')->middleware(['auth'])->name('birthday.edit');
+Route::post('/birthday/addabout', ['as' => '/birthday/addabout', 'uses' => 'App\Http\Controllers\BirthdayController@addabout']);
+Route::post('/birthday/update', ['as' => '/birthday/update/', 'uses' => 'App\Http\Controllers\BirthdayController@update']);
+
+
 require __DIR__.'/auth.php';

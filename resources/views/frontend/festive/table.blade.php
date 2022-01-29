@@ -27,7 +27,7 @@
                                         <p>
                                             The print button will open a new window in the end user's browser and, by default, automatically trigger the print function allowing the end user to print the table. The window will be closed once the print is complete, or has been cancelled.
                                         </p> --}}
-    
+
                                         <div class="table-responsive">
                                             <table class="table table-striped dataex-html5-selectors">
                                                 <thead>
@@ -50,7 +50,7 @@
 <tr>
 
                                                         <td>{{ $tables->mainMenu }}</td>
-                                                        <td>{{ $tables->SubMenu }}</td>
+                                                        <td>{{ $tables->subMenu }}</td>
                                                         <td>{{ $tables->name }}</td>
                                                         <td><img src="data:image/png;base64, {{ $tables->image }}" width='10%' alt="Image Preview" /></td>
                                                         <td>@if ($tables->is_Active == 1)

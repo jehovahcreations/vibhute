@@ -32,6 +32,8 @@
                 </li>
                 <li class=" nav-item"><a href="/banner/table"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="Todo">Banner</span></a>
                 </li>
+                <li class=" nav-item"><a href="/birthday/table"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="Todo">Birthday</span></a>
+                </li>
                 <li class=" nav-item"><a href="/contact/table"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Contact</span></a>
                 </li>
                 <li class=" nav-item"><a href="/disclimer/table"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Ecommerce">Disclimer</span></a>
