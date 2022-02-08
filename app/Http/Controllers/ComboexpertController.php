@@ -52,7 +52,8 @@ class ComboexpertController extends Controller
         Session::flash('alert-class', 'alert-danger');
         return view('frontend.comboexpert.table')->with('table', $table);
     }
-  
+    //face reconisation
+
     function addabout(Request $request)
     {
         $image = base64_encode(file_get_contents($request->file('image')));
@@ -66,17 +67,8 @@ class ComboexpertController extends Controller
         $user->mainMenuNo = $mainmenu[0]->menuNumber;
         $user->icon = $request['icon'];
         $user->subMenu = $request['subMenu'];
-        $user->MinimumAgeatEntry = $request['MinimumAgeatEntry'];
-        $user->MaximumAgeatEntry = $request['MaximumAgeatEntry'];
-        $user->MaximumMaturityAge = $request['MaximumMaturityAge'];
-        $user->PolicyTerm = $request['PolicyTerm'];
-        $user->MinimumSumAssured = $request['MinimumSumAssured'];
-        $user->MaximumSumAssured = $request['MaximumSumAssured'];
-        $user->PremiumMode = $request['PremiumMode'];
-        $user->RidersAvailable = $request['RidersAvailable'];
-        $user->SurrenderValue = $request['SurrenderValue'];
-        $user->LoanAvailable = $request['LoanAvailable'];
-        $user->OtherBenefit = $request['OtherBenefit'];
+        $user->sms = $request['sms'];
+        $user->whatsapp = $request['whatsapp'];
         $user->name = $request['name'];
         $user->image = $image;
         $user->plan = $plan;

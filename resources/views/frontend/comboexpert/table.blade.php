@@ -35,18 +35,10 @@
                                                         {{-- "mainMenu","mainMenuNo","subMenu","subMenuNo","is_Active","icon", --}}
                                                         <th>Main Menu</th>
                                                         <th>Sub Menu</th>
-                                                        <th>MinimumAgeatEntry</th>
-                                                        <th>MaximumAgeatEntry</th>
-                                                        <th>MaximumMaturityAge</th>
-                                                        <th>PolicyTerm</th>
-                                                        <th>MinimumSumAssured</th>
-                                                        <th>MaximumSumAssured</th>
-                                                        <th>PremiumMode</th>
-                                                        <th>RidersAvailable</th>
-                                                        <th>SurrenderValue</th>
-                                                        <th>LoanAvailable</th>
-                                                        <th>OtherBenefit</th>
-                                                        <th>Name</th>
+                                                       <th>Name</th>
+                                                        <th>SMS</th>
+                                                        <th>Whats App</th>
+                                                        
                                                         <th>Active/Deactive</th>
                                                         <th>Edit</th>
                                                         <th>Delete</th>
@@ -61,18 +53,10 @@
 
                                                         <td>{{ $tables->mainMenu }}</td>
                                                         <td>{{ $tables->subMenu }}</td>
-                                                        <td>{{ $tables->MinimumAgeatEntry }}</td>
-                                                        <td>{{ $tables->MaximumAgeatEntry }}</td>
-                                                         <td>{{ $tables->MaximumMaturityAge }}</td>
-                                                        <td>{{ $tables->PolicyTerm }}</td>
-                                                        <td>{{ $tables->MinimumSumAssured }}</td>
-                                                        <td>{{ $tables->MaximumSumAssured }}</td>
-                                                         <td>{{ $tables->PremiumMode }}</td>
-                                                        <td>{{ $tables->RidersAvailable }}</td>
-                                                        <td>{{ $tables->SurrenderValue }}</td>
-                                                        <td>{{ $tables->LoanAvailable }}</td>
-                                                        <td>{{ $tables->OtherBenefit }}</td>
                                                         <td>{{ $tables->name }}</td>
+                                                        <td>{{ $tables->sms }}</td>
+                                                         <td>{{ $tables->whatsapp }}</td>
+                                                        
                                                         {{-- <td><img src="data:image/png;base64, {{ $tables->image }}" width='10%' alt="Image Preview" /></td> --}}
                                                         <td>@if ($tables->is_Active == 1)
                                                            <a href="{{ route('comboexpert.deactive',[$tables->_id]) }}" class="btn btn-danger">Deactivate</a>

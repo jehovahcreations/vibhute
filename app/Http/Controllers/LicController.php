@@ -52,10 +52,11 @@ class LicController extends Controller
         Session::flash('alert-class', 'alert-danger');
         return view('frontend.lic.table')->with('table', $table);
     }
-  
+
     function addabout(Request $request)
     {
-        // $image = base64_encode(file_get_contents($request->file('image')));
+         $image = base64_encode(file_get_contents($request->file('image')));
+
         // $plan = base64_encode(file_get_contents($request->file('image')));
         $file = $request->file('pdf');
         $destinationPath = 'uploads';
@@ -64,23 +65,12 @@ class LicController extends Controller
         $user = new Lic();
         $user->MainMenu = $request['mainMenu'];
         $user->mainMenuNo = $mainmenu[0]->menuNumber;
-        // $user->icon = $request['icon'];
+        $user->name = $request['name'];
         $user->SubMenu = $request['subMenu'];
         $user->Category = $request['category'];
-        $user->MinimumAgeatEntry = $request['MinimumAgeatEntry'];
-        $user->MaximumAgeatEntry = $request['MaximumAgeatEntry'];
-        $user->MaximumMaturityAge = $request['MaximumMaturityAge'];
-        $user->PolicyTerm = $request['PolicyTerm'];
-        $user->MinimumSumAssured = $request['MinimumSumAssured'];
-        $user->MaximumSumAssured = $request['MaximumSumAssured'];
-        $user->PremiumMode = $request['PremiumMode'];
-        $user->RidersAvailable = $request['RidersAvailable'];
-        $user->SurrenderValue = $request['SurrenderValue'];
-        $user->LoanAvailable = $request['LoanAvailable'];
-        $user->OtherBenefit = $request['OtherBenefit'];
-        $user->name = $request['name'];
-        // $user->image = $image;
-        // $user->plan = $plan;
+        $user->sms = $request['sms'];
+        $user->whatsapp = $request['whatsapp'];
+        $user->image = $image;
         $user->pdf = 'uploads/'.$file->getClientOriginalName();
         $user->is_Active = 1;
         $user->save();

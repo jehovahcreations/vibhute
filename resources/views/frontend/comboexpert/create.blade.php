@@ -46,25 +46,13 @@
                                                           </div>
                                                         </div>
                                                     </div>
-
-
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
-                                                                <span>MinimumAgeatEntry</span>
+                                                                <span>Name</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="MinimumAgeatEntry" placeholder="MinimumAgeatEntry">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>MaximumAgeatEntry</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="MaximumAgeatEntry" placeholder="MaximumAgeatEntry">
+                                                                <input type="text" id="name" class="form-control" name="name" placeholder="SMS content">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -72,110 +60,23 @@
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
-                                                                <span>MaximumMaturityAge</span>
+                                                                <span>SMS</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <input type="text" id="decp" class="form-control" name="MaximumMaturityAge" placeholder="MaximumMaturityAge">
+                                                                <input type="text" id="name" class="form-control" name="sms" placeholder="SMS content">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
-                                                                <span>PolicyTerm</span>
+                                                                <span>Whatsapp</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="PolicyTerm" placeholder="PolicyTerm">
+                                                                <input type="text" id="name" class="form-control" name="whatsapp" placeholder="Whatsapp Content">
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>MinimumSumAssured</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="decp" class="form-control" name="MinimumSumAssured" placeholder="MinimumSumAssured">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>MaximumSumAssured</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="MaximumSumAssured" placeholder="MaximumSumAssured">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>PremiumMode</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="decp" class="form-control" name="PremiumMode" placeholder="PremiumMode">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>RidersAvailable</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="RidersAvailable" placeholder="RidersAvailable">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>SurrenderValue</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="decp" class="form-control" name="SurrenderValue" placeholder="SurrenderValue">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                  
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>LoanAvailable</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="LoanAvailable" placeholder="LoanAvailable">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>OtherBenefit</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="decp" class="form-control" name="OtherBenefit" placeholder="OtherBenefit">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>name</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="name" class="form-control" name="name" placeholder="name">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
                                                      <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">

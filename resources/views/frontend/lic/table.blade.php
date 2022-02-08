@@ -27,7 +27,7 @@
                                         <p>
                                             The print button will open a new window in the end user's browser and, by default, automatically trigger the print function allowing the end user to print the table. The window will be closed once the print is complete, or has been cancelled.
                                         </p> --}}
-    
+
                                         <div class="table-responsive">
                                             <table class="table table-striped dataex-html5-selectors">
                                                 <thead>
@@ -36,18 +36,10 @@
                                                         <th>Main Menu</th>
                                                         <th>Sub Menu</th>
                                                         <th>Category</th>
-                                                        <th>MinimumAgeatEntry</th>
-                                                        <th>MaximumAgeatEntry</th>
-                                                        <th>MaximumMaturityAge</th>
-                                                        <th>PolicyTerm</th>
-                                                        <th>MinimumSumAssured</th>
-                                                        <th>MaximumSumAssured</th>
-                                                        <th>PremiumMode</th>
-                                                        <th>RidersAvailable</th>
-                                                        <th>SurrenderValue</th>
-                                                        <th>LoanAvailable</th>
-                                                        <th>OtherBenefit</th>
+                                                        <th>sms</th>
+                                                        <th>Whatsapp</th>
                                                         <th>Name</th>
+
                                                         <th>Active/Deactive</th>
                                                         {{-- <th>Edit</th> --}}
                                                         <th>Delete</th>
@@ -63,18 +55,10 @@
                                                         <td>{{ $tables->MainMenu }}</td>
                                                         <td>{{ $tables->SubMenu }}</td>
                                                         <td>{{ $tables->Category }}</td>
-                                                        <td>{{ $tables->MinimumAgeatEntry }}</td>
-                                                        <td>{{ $tables->MaximumAgeatEntry }}</td>
-                                                         <td>{{ $tables->MaximumMaturityAge }}</td>
-                                                        <td>{{ $tables->PolicyTerm }}</td>
-                                                        <td>{{ $tables->MinimumSumAssured }}</td>
-                                                        <td>{{ $tables->MaximumSumAssured }}</td>
-                                                         <td>{{ $tables->PremiumMode }}</td>
-                                                        <td>{{ $tables->RidersAvailable }}</td>
-                                                        <td>{{ $tables->SurrenderValue }}</td>
-                                                        <td>{{ $tables->LoanAvailable }}</td>
-                                                        <td>{{ $tables->OtherBenefit }}</td>
+                                                        <td>{{ $tables->sms }}</td>
+                                                        <td>{{ $tables->whatsapp }}</td>
                                                         <td>{{ $tables->name }}</td>
+
                                                         {{-- <td><img src="data:image/png;base64, {{ $tables->image }}" width='10%' alt="Image Preview" /></td> --}}
                                                         <td>@if ($tables->is_Active == 1)
                                                            <a href="{{ route('lic.deactive',[$tables->_id]) }}" class="btn btn-danger">Deactivate</a>
