@@ -47,7 +47,7 @@
                                                                 <span>icon</span>
                                                             </div>
                                                             <div class="col-md-8">
-                                                                <input type="text" id="decp" class="form-control" name="icon" placeholder="Decription">
+                                                                <input type="number" id="decp" class="form-control" name="icon" placeholder="Decription">
                                                             </div>
                                                         </div>
                                                     </div>
