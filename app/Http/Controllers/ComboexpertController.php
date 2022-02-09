@@ -57,7 +57,7 @@ class ComboexpertController extends Controller
     function addabout(Request $request)
     {
         $image = base64_encode(file_get_contents($request->file('image')));
-        $plan = base64_encode(file_get_contents($request->file('image')));
+        $plan = base64_encode(file_get_contents($request->file('plan')));
         $file = $request->file('pdf');
         $destinationPath = 'uploads';
         $file->move($destinationPath,$file->getClientOriginalName());
