@@ -17,12 +17,12 @@ class BirthdayController extends Controller
         // return $id;
         $table = Birthday::get();
         // $menu = Birthday::get();
-        return view('frontend.Birthday.table')->with('table', $table);
+        return view('frontend.birthday.table')->with('table', $table);
     }
     function create()
     {
         $table = Submenu::get();
-        return view('frontend.Birthday.create')->with('table', $table);
+        return view('frontend.birthday.create')->with('table', $table);
     }
     function deactive($id)
     {
@@ -32,7 +32,7 @@ class BirthdayController extends Controller
         $table = Birthday::get();
         Session::flash('message', 'Sucessfully Deactivated !!!');
         Session::flash('alert-class', 'alert-danger');
-        return view('frontend.Birthday.table')->with('table', $table);
+        return view('frontend.birthday.table')->with('table', $table);
     }
     function active($id)
     {
@@ -42,7 +42,7 @@ class BirthdayController extends Controller
         $table = Birthday::get();
         Session::flash('message', 'Successfully Activated!');
         Session::flash('alert-class', 'alert-success');
-        return view('frontend.Birthday.table')->with('table', $table);
+        return view('frontend.birthday.table')->with('table', $table);
     }
     function delete($id)
     {
@@ -50,7 +50,7 @@ class BirthdayController extends Controller
         $table = Birthday::get();
         Session::flash('message', 'Deleted Successfully!');
         Session::flash('alert-class', 'alert-danger');
-        return view('frontend.Birthday.table')->with('table', $table);
+        return view('frontend.birthday.table')->with('table', $table);
     }
 
     function addabout(Request $request)
@@ -68,12 +68,12 @@ class BirthdayController extends Controller
         $table = Birthday::get();
         Session::flash('message', 'Saved Successfully!');
         Session::flash('alert-class', 'alert-success');
-        return view('frontend.Birthday.table')->with('table', $table);
+        return view('frontend.birthday.table')->with('table', $table);
     }
     function edit($id)
     {
         $table = Birthday::find($id);
-        return view('frontend.Birthday.edit')->with('table', $table);
+        return view('frontend.birthday.edit')->with('table', $table);
     }
     function update(Request $request)
     {
@@ -94,6 +94,6 @@ class BirthdayController extends Controller
         $table = Birthday::get();
         Session::flash('message', 'Saved Successfully!');
         Session::flash('alert-class', 'alert-success');
-        return view('frontend.Birthday.table')->with('table', $table);
+        return view('frontend.birthday.table')->with('table', $table);
     }
 }
