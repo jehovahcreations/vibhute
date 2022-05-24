@@ -14,18 +14,54 @@
                 {{-- <li class=" nav-item"><a href="index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2">2</span></a>
                     <ul class="menu-content">
 
-                        {{-- <li class="active"><a href="dashboard-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
+                        <li class=""><a href="dashboard-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
                         </li>
                         <li><a href="dashboard-ecommerce.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">eCommerce</span></a>
-                        </li> --}}
-                    {{-- </ul>
-                </li>  --}}
+                        </li>
+                     </ul>
+                </li> --}}
                 {{-- <li class=" navigation-header"><span>Apps</span>
                 </li> --}}
                  {{-- @foreach($menu as $menus)
                         <li class=" nav-item"><a href="/tableview/{{ $menus->table }}"><i class="feather {{ $menus->icon }}"></i><span class="menu-title" data-i18n="Email">{{ $menus->name }}</span></a>
                         </li>
                         @endforeach --}}
+                 <li class=" nav-item"><a href="/menu/table"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Email">Data</span></a>
+                </li>
+                {{-- <li class=" nav-item"><a href="/submenu/table"><i class="feather icon-box"></i><span class="menu-title" data-i18n="Email">Products</span></a>
+                </li>
+                  <li class=" nav-item"><a href=""><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">User</span></a>
+                    <ul class="menu-content">
+
+                        <li class=""><a href="/staff/table"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Staff</span></a>
+                        </li>
+                        <li><a href="/franchisee/table"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Franchisee</span></a>
+                        </li>
+                        <li><a href="/vendor/table"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Vendor</span></a>
+                        </li>
+                     </ul>
+                </li>
+                <li class=" nav-item"><a href=""><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Product Reports</span></a>
+                    <ul class="menu-content">
+
+                        <li class=""><a href="/preport/table"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Savings Account</span></a>
+                        </li>
+                        <li><a href="/preport/tablecc"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Credit Card</span></a>
+                        </li>
+                        <li><a href="/preport/tabledemat"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Demat</span></a>
+                        </li>
+                        <li><a href="/preport/tablecrypto"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Crypto</span></a>
+                        </li>
+                         <li><a href="/preport/tableloan"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Instant Loan</span></a>
+                        </li>
+                         <li><a href="/preport/tableonboarding"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Onboarding</span></a>
+                        </li>
+                         <li><a href="/preport/tablegovt"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Government Services</span></a>
+                        </li>
+                         <li><a href="/preport/tableloann"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">Loan</span></a>
+                        </li>
+                     </ul>
+                </li>
                 <li class=" nav-item"><a href="/about/table"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Email">About Us</span></a>
                 </li>
                 <li class=" nav-item"><a href="/setting/table"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Setting</span></a>
@@ -68,7 +104,7 @@
                 <li class=" nav-item"><a href="/poster/table"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Toastr">Poster</span></a>
                 </li>
                 <li class=" nav-item"><a href="/user/table"><i class="feather icon-sliders"></i><span class="menu-title" data-i18n="NoUi Slider">User</span></a>
-                </li>
+                </li> --}}
                 {{-- <li class=" nav-item"><a href="ext-component-file-uploader.html"><i class="feather icon-upload-cloud"></i><span class="menu-title" data-i18n="File Uploader">File Uploader</span></a>
                 </li>
                 <li class=" nav-item"><a href="ext-component-quill-editor.html"><i class="feather icon-edit"></i><span class="menu-title" data-i18n="Quill Editor">Quill Editor</span></a>

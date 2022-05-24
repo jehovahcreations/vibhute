@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenulistController;
 use App\Http\Controllers\ApplinkController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SubmenuController;
+use App\Http\Controllers\StaffController;
+use App\Http\Controllers\FranchiseeController;
+use App\Http\Controllers\VendorController;
+use App\Http\Controllers\BankController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +31,124 @@ Route::get('/', function () {
 // })->middleware(['auth'])->name('dashboard');
 
 Route::get('/menulist', [MenulistController::class, 'index'])->middleware(['auth'])->name('menulist');
-Route::get('/dashboard', [MenulistController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [MenulistController::class, 'table'])->middleware(['auth'])->name('dashboard');
+
+
+//menu
+Route::get('/menu/table', [MenuController::class, 'table'])->middleware(['auth'])->name('data.table');
+Route::get('/menu/deactive/{id}', [MenuController::class, 'deactive'])->middleware(['auth'])->name('menu.deactive');
+Route::get('/menu/active/{id}', [MenuController::class, 'active'])->middleware(['auth'])->name('menu.active');
+Route::get('/menu/delete/{id}', [MenuController::class, 'delete'])->middleware(['auth'])->name('menu.delete');
+Route::get('/menu/create', function () {
+    return view('admin.menu.create');
+})->middleware(['auth'])->name('menu.create');
+Route::post('/menu/addmenu', ['as' => '/menu/addmenu', 'uses' => 'App\Http\Controllers\MenuController@addmenu']);
+Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->middleware(['auth'])->name('menu.edit');
+Route::post('/menu/update', ['as' => '/menu/update/', 'uses' => 'App\Http\Controllers\MenuController@update']);
+
+
+//submenu
+Route::get('/submenu/table', [SubmenuController::class, 'table'])->middleware(['auth'])->name('submenu.table');
+Route::get('/submenu/create', [SubmenuController::class, 'create'])->middleware(['auth'])->name('submenu.create');
+Route::get('/submenu/deactive/{id}', [SubmenuController::class, 'deactive'])->middleware(['auth'])->name('submenu.deactive');
+Route::get('/submenu/active/{id}', [SubmenuController::class, 'active'])->middleware(['auth'])->name('submenu.active');
+Route::get('/submenu/delete/{id}', [SubmenuController::class, 'delete'])->middleware(['auth'])->name('submenu.delete');
+Route::post('/submenu/addsubmenu', ['as' => '/submenu/addsubmenu', 'uses' => 'App\Http\Controllers\SubmenuController@addsubmenu']);
+Route::get('/submenu/edit/{id}', [SubmenuController::class, 'edit'])->middleware(['auth'])->name('submenu.edit');
+Route::post('/submenu/update', ['as' => '/submenu/update/', 'uses' => 'App\Http\Controllers\SubmenuController@update']);
+
+//user/staff
+Route::get('/staff/table', [StaffController::class, 'table'])->middleware(['auth'])->name('staff.table');
+Route::get('/staff/view/{id}', [StaffController::class, 'view'])->middleware(['auth'])->name('staff.view');
+Route::get('/staff/create', [StaffController::class, 'create'])->middleware(['auth'])->name('staff.create');
+Route::get('/staff/deactive/{id}', [StaffController::class, 'deactive'])->middleware(['auth'])->name('staff.deactive');
+Route::get('/staff/active/{id}', [StaffController::class, 'active'])->middleware(['auth'])->name('staff.active');
+Route::get('/staff/delete/{id}', [StaffController::class, 'delete'])->middleware(['auth'])->name('staff.delete');
+Route::post('/staff/addsubmenu', ['as' => '/staff/addsubmenu', 'uses' => 'App\Http\Controllers\StaffController@addsubmenu'])->name('staff.addsubmenu');
+Route::get('/staff/edit/{id}', [StaffController::class, 'edit'])->middleware(['auth'])->name('staff.edit');
+Route::post('/staff/update', ['as' => '/staff/update', 'uses' => 'App\Http\Controllers\StaffController@update']);
+
+//user/franchisee
+Route::get('/franchisee/table', [FranchiseeController::class, 'table'])->middleware(['auth'])->name('franchisee.table');
+Route::get('/franchisee/view/{id}', [FranchiseeController::class, 'view'])->middleware(['auth'])->name('franchisee.view');
+Route::get('/franchisee/create', [FranchiseeController::class, 'create'])->middleware(['auth'])->name('franchisee.create');
+Route::get('/franchisee/deactive/{id}', [FranchiseeController::class, 'deactive'])->middleware(['auth'])->name('franchisee.deactive');
+Route::get('/franchisee/active/{id}', [FranchiseeController::class, 'active'])->middleware(['auth'])->name('franchisee.active');
+Route::get('/franchisee/delete/{id}', [FranchiseeController::class, 'delete'])->middleware(['auth'])->name('franchisee.delete');
+Route::post('/franchisee/addsubmenu', ['as' => '/franchisee/addsubmenu', 'uses' => 'App\Http\Controllers\FranchiseeController@addsubmenu'])->name('franchisee.addsubmenu');
+Route::get('/franchisee/edit/{id}', [FranchiseeController::class, 'edit'])->middleware(['auth'])->name('franchisee.edit');
+Route::post('/franchisee/update', ['as' => '/franchisee/update', 'uses' => 'App\Http\Controllers\FranchiseeController@update']);
+
+//user/vendor
+Route::get('/vendor/table', [VendorController::class, 'table'])->middleware(['auth'])->name('vendor.table');
+Route::get('/vendor/view/{id}', [VendorController::class, 'view'])->middleware(['auth'])->name('vendor.view');
+Route::get('/vendor/create', [VendorController::class, 'create'])->middleware(['auth'])->name('vendor.create');
+Route::get('/vendor/deactive/{id}', [VendorController::class, 'deactive'])->middleware(['auth'])->name('vendor.deactive');
+Route::get('/vendor/active/{id}', [VendorController::class, 'active'])->middleware(['auth'])->name('vendor.active');
+Route::get('/vendor/delete/{id}', [VendorController::class, 'delete'])->middleware(['auth'])->name('vendor.delete');
+Route::post('/vendor/addsubmenu', ['as' => '/vendor/addsubmenu', 'uses' => 'App\Http\Controllers\VendorController@addsubmenu'])->name('vendor.addsubmenu');
+Route::get('/vendor/edit/{id}', [VendorController::class, 'edit'])->middleware(['auth'])->name('vendor.edit');
+Route::post('/vendor/update', ['as' => '/vendor/update', 'uses' => 'App\Http\Controllers\VendorController@update']);
+
+//Report
+Route::get('/preport/table', [BankController::class, 'table'])->middleware(['auth'])->name('preport.table');
+Route::get('/preport/initate/{id}', [BankController::class, 'initate'])->middleware(['auth'])->name('preport.initate');
+Route::get('/preport/process/{id}', [BankController::class, 'process'])->middleware(['auth'])->name('preport.process');
+Route::get('/preport/approve/{id}', [BankController::class, 'approve'])->middleware(['auth'])->name('preport.approve');
+Route::get('/preport/reject/{id}', [BankController::class, 'reject'])->middleware(['auth'])->name('preport.reject');
+
+//cc
+Route::get('/preport/tablecc', [BankController::class, 'tablecc'])->middleware(['auth'])->name('preport.tablecc');
+Route::get('/preport/initatecc/{id}', [BankController::class, 'initatecc'])->middleware(['auth'])->name('preport.initatecc');
+Route::get('/preport/processcc/{id}', [BankController::class, 'processcc'])->middleware(['auth'])->name('preport.processcc');
+Route::get('/preport/approvecc/{id}', [BankController::class, 'approvecc'])->middleware(['auth'])->name('preport.approvecc');
+Route::get('/preport/rejectcc/{id}', [BankController::class, 'rejectcc'])->middleware(['auth'])->name('preport.rejectcc');
+
+//demat
+Route::get('/preport/tabledemat', [BankController::class, 'tabledemat'])->middleware(['auth'])->name('preport.tabledemat');
+Route::get('/preport/initatedemat/{id}', [BankController::class, 'initatedemat'])->middleware(['auth'])->name('preport.initatedemat');
+Route::get('/preport/processdemat/{id}', [BankController::class, 'processdemat'])->middleware(['auth'])->name('preport.processdemat');
+Route::get('/preport/approvedemat/{id}', [BankController::class, 'approvedemat'])->middleware(['auth'])->name('preport.approvedemat');
+Route::get('/preport/rejectdemat/{id}', [BankController::class, 'rejectdemat'])->middleware(['auth'])->name('preport.rejectdemat');
+
+//crypto
+Route::get('/preport/tablecrypto', [BankController::class, 'tablecrypto'])->middleware(['auth'])->name('preport.tablecrypto');
+Route::get('/preport/initatecrypto/{id}', [BankController::class, 'initatecrypto'])->middleware(['auth'])->name('preport.initatecrypto');
+Route::get('/preport/processcrypto/{id}', [BankController::class, 'processcrypto'])->middleware(['auth'])->name('preport.processcrypto');
+Route::get('/preport/approvecrypto/{id}', [BankController::class, 'approvecrypto'])->middleware(['auth'])->name('preport.approvecrypto');
+Route::get('/preport/rejectcrypto/{id}', [BankController::class, 'rejectcrypto'])->middleware(['auth'])->name('preport.rejectcrypto');
+
+//loan
+Route::get('/preport/tableloan', [BankController::class, 'tableloan'])->middleware(['auth'])->name('preport.tableloan');
+Route::get('/preport/initateloan/{id}', [BankController::class, 'initateloan'])->middleware(['auth'])->name('preport.initateloan');
+Route::get('/preport/processloan/{id}', [BankController::class, 'processloan'])->middleware(['auth'])->name('preport.processloan');
+Route::get('/preport/approveloan/{id}', [BankController::class, 'approveloan'])->middleware(['auth'])->name('preport.approveloan');
+Route::get('/preport/rejectloan/{id}', [BankController::class, 'rejectloan'])->middleware(['auth'])->name('preport.rejectloan');
+
+//onboarding
+Route::get('/preport/tableonboarding', [BankController::class, 'tableonboarding'])->middleware(['auth'])->name('preport.tableonboarding');
+Route::get('/preport/initateonboarding/{id}', [BankController::class, 'initateonboarding'])->middleware(['auth'])->name('preport.initateonboarding');
+Route::get('/preport/processonboarding/{id}', [BankController::class, 'processonboarding'])->middleware(['auth'])->name('preport.processonboarding');
+Route::get('/preport/approveonboarding/{id}', [BankController::class, 'approveonboarding'])->middleware(['auth'])->name('preport.approveonboarding');
+Route::get('/preport/rejectonboarding/{id}', [BankController::class, 'rejectonboarding'])->middleware(['auth'])->name('preport.rejectonboarding');
+
+//govt
+Route::get('/preport/tablegovt', [BankController::class, 'tablegovt'])->middleware(['auth'])->name('preport.tablegovt');
+Route::get('/preport/initategovt/{id}', [BankController::class, 'initategovt'])->middleware(['auth'])->name('preport.initategovt');
+Route::get('/preport/processgovt/{id}', [BankController::class, 'processgovt'])->middleware(['auth'])->name('preport.processgovt');
+Route::get('/preport/approvegovt/{id}', [BankController::class, 'approvegovt'])->middleware(['auth'])->name('preport.approvegovt');
+Route::get('/preport/rejectgovt/{id}', [BankController::class, 'rejectgovt'])->middleware(['auth'])->name('preport.rejectgovt');
+
+//loann
+Route::get('/preport/tableloann', [BankController::class, 'tableloann'])->middleware(['auth'])->name('preport.tableloann');
+Route::get('/preport/initateloann/{id}', [BankController::class, 'initateloann'])->middleware(['auth'])->name('preport.initateloann');
+Route::get('/preport/processloann/{id}', [BankController::class, 'processloann'])->middleware(['auth'])->name('preport.processloann');
+Route::get('/preport/approveloann/{id}', [BankController::class, 'approveloann'])->middleware(['auth'])->name('preport.approveloann');
+Route::get('/preport/rejectloann/{id}', [BankController::class, 'rejectloann'])->middleware(['auth'])->name('preport.rejectloann');
+Route::get('/preport/viewloann/{id}', [BankController::class, 'viewloann'])->middleware(['auth'])->name('preport.viewloann');
+
+
+
 //About Us
 Route::get('/about/table', [MenulistController::class, 'table'])->middleware(['auth'])->name('about.table');
 Route::get('/about/deactive/{id}', [MenulistController::class, 'deactive'])->middleware(['auth'])->name('about.deactive');
@@ -136,16 +260,16 @@ Route::get('/youtube/create', function () {
 Route::post('/youtube/addabout', ['as' => '/youtube/addabout', 'uses' => 'App\Http\Controllers\YoutubeController@addabout']);
 Route::post('/youtube/update', ['as' => '/youtube/update/', 'uses' => 'App\Http\Controllers\YoutubeController@update']);
 
-//Submenu
+// //Submenu
 
-Route::get('/submenu/table', 'App\Http\Controllers\SubmenuController@table')->middleware(['auth'])->name('submenu.table');
-Route::get('/submenu/create', 'App\Http\Controllers\SubmenuController@create')->middleware(['auth'])->name('submenu.create');
-Route::get('/submenu/deactive/{id}', 'App\Http\Controllers\SubmenuController@deactive')->middleware(['auth'])->name('submenu.deactive');
-Route::get('/submenu/active/{id}', 'App\Http\Controllers\SubmenuController@active')->middleware(['auth'])->name('submenu.active');
-Route::get('/submenu/delete/{id}', 'App\Http\Controllers\SubmenuController@delete')->middleware(['auth'])->name('submenu.delete');
-Route::get('/submenu/edit/{id}', 'App\Http\Controllers\SubmenuController@edit')->middleware(['auth'])->name('submenu.edit');
-Route::post('/submenu/addabout', ['as' => '/submenu/addabout', 'uses' => 'App\Http\Controllers\SubmenuController@addabout']);
-Route::post('/submenu/update', ['as' => '/submenu/update/', 'uses' => 'App\Http\Controllers\SubmenuController@update']);
+// Route::get('/submenu/table', 'App\Http\Controllers\SubmenuController@table')->middleware(['auth'])->name('submenu.table');
+// Route::get('/submenu/create', 'App\Http\Controllers\SubmenuController@create')->middleware(['auth'])->name('submenu.create');
+// Route::get('/submenu/deactive/{id}', 'App\Http\Controllers\SubmenuController@deactive')->middleware(['auth'])->name('submenu.deactive');
+// Route::get('/submenu/active/{id}', 'App\Http\Controllers\SubmenuController@active')->middleware(['auth'])->name('submenu.active');
+// Route::get('/submenu/delete/{id}', 'App\Http\Controllers\SubmenuController@delete')->middleware(['auth'])->name('submenu.delete');
+// Route::get('/submenu/edit/{id}', 'App\Http\Controllers\SubmenuController@edit')->middleware(['auth'])->name('submenu.edit');
+// Route::post('/submenu/addabout', ['as' => '/submenu/addabout', 'uses' => 'App\Http\Controllers\SubmenuController@addabout']);
+// Route::post('/submenu/update', ['as' => '/submenu/update/', 'uses' => 'App\Http\Controllers\SubmenuController@update']);
 
 //Category
 
